@@ -1,4 +1,5 @@
 export interface Cilios {
-    title: string;
+    id: string;
+    name: string;
     description: string;
 }
