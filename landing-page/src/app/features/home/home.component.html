@@ -1,46 +1,36 @@
 
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner" style="display: flex; margin-top: 5rem; margin-left: 32rem;">
-    <div class="carousel-item active">
-      <img style="width: 28rem;" src="/assets/img/banner-precario.png" class="d-block" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img style="width: 28rem;"src="/assets/img/banner-precario.png" class="d-block" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img style="width: 28rem;" src="/assets/img/banner-precario.png" class="d-block" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<div>
+  <img style="width: 100%;" src="/assets/img/banner-precario.png" alt="">
 </div>
-
 
 <div
-  *ngIf="getAllCilios$ | async as cilios"
-  style="
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    margin-top: 5rem;
-    margin-bottom: 10rem;
-    gap: 2rem;
-  "
->
-  <div class="card" style="width: 18rem" *ngFor="let cilio of cilios">
-    <!-- <img src="..." class="card-img-top" alt="..." /> -->
-    <div class="card-body">
-      <h5 class="card-title">{{ cilio.name }}</h5>
-      <p class="card-text">
-        {{ cilio.description }}
-      </p>
-      <a href="#" class="btn" style="background-color: antiquewhite;">Visualizar</a>
+    *ngIf="getAllCilios$ | async as cilios"
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 4rem;
+      margin-top: 5rem;
+      margin-bottom: 10rem;
+      gap: 2rem;
+    "
+  >
+    <div class="card" style="width: 100%; margin: 2rem;" *ngFor="let cilio of cilios">
+      <div class="card-body">
+        <h5 class="card-title">{{ cilio.name }}</h5>
+        <p class="card-text">
+          {{ cilio.description }}
+        </p>
+        <a href="/about" class="btn" style="background-color: antiquewhite"
+          >Visualizar</a
+        >
+      </div>
     </div>
   </div>
-</div>
+
+
+
+  
+
+
+  
